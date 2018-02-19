@@ -1,0 +1,90 @@
+<html>
+<head>
+<style>
+body {
+background:#000;
+color:white;
+}
+.content {
+width:250px;
+}
+.ikona{
+padding:10%;
+text-align:center;
+cursor:pointer;
+}
+.b-green {
+background:green;
+}
+.b-green:hover {
+background:#4fca11;
+}
+.b-blue {
+background:#3333d6;
+}
+.b-blue:hover {
+background:blue;
+}
+.left {
+float:left;
+}
+.right {
+float:right;
+}
+#cont {
+background:gray;
+width:50%;
+height:200px;
+text-align:center;
+font-size:20px;
+}
+.none {
+display:none;
+}
+</style>
+</head>
+<body>
+<div class="content">
+	<div onclick="show('t1');" class="ikona b-green left">
+	IKONA1
+	</div>
+	<div onclick="show('t2');" class="ikona b-blue left">
+	IKONA2
+	</div>
+	<div onclick="show('t3');" class="ikona b-blue left">
+	IKONA3
+	</div>
+	<div onclick="show('t4');" class="ikona b-green left">
+	IKONA4
+	</div>
+</div>
+<div id="cont" class="right">
+<span id="t1" class="none">
+<p>TRESC 1</p>
+</span>
+<span id="t2" class="none">
+<p>2- TRESC</p>
+</span>
+<span id="t3" class="none">
+<p>TRE - 3 - SC</p>
+</span>
+<span id="t4" class="none">
+<p>TRESC 4</p>
+</span>
+</div>
+<script>
+window.onload = function() {
+  show('t1');
+};
+var last="t1";
+function hide(id) {
+	document.getElementById(id).style.display = "none";
+}
+function show(id){
+	hide(last);
+	last=id;
+	document.getElementById(id).style.display = "block";
+}
+</script>
+</body>
+</html>
