@@ -1,15 +1,15 @@
 <?php
+
 session_start();
 require_once "connect.php";
+unset($polaczanie);
 $polaczanie = @new mysqli($host, $db_user, $db_password, $db_name);
 if ($polaczanie->connect_errno != 0) {
     echo "Error: " . $polaczanie->connect_errno . "Opis: " . $polaczanie->connect_errno;
 } else {
     $log = mysqli_real_escape_string($polaczanie, $_POST["inputEmailTel"]);
     $haslo = mysqli_real_escape_string($polaczanie, $_POST["inputHasloLog"]);
-    echo $log." ".$haslo;
-
-    $sql = "SELECT * FROM uzytkownik WHERE email='".$log."' AND haslo='".$haslo."'";
+    $sql = "SELECT * FROM klienci WHERE email='" . $log . "' AND haslo='" . $haslo . "'";
     if ($result = @$polaczanie->query($sql)) { //wproawadzanie zapytania do bazy danych
         $How_much = $result->num_rows;
         if ($How_much > 0) {
