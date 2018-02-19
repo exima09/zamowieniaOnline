@@ -37,8 +37,8 @@ if ($polaczanie->connect_errno != 0) {
     echo "Error: " . $polaczanie->connect_errno . "Opis: " . $polaczanie->connect_errno;
 } else {
     if ($blad != 2) {
-        $sql = "INSERT INTO klienci(`id_klienta`, `imie`, `nazwisko`, `email`, `haslo`, `ulica`, `nr_domu`, `nr_mieszkania`, `nr_telefonu`, `ip`)
-	  VALUES(NULL,'$imie','$nazwisko','$email','$haslo','$ulica',$nrdomu,'$nrmieszkania',$tel,'$ip')";
+        $sql = "INSERT INTO klienci(`id_klienta`, `imie`, `nazwisko`, `email`, `haslo`, `ulica`, `nr_domu`, `nr_mieszkania`, `nr_telefonu`, `ip`, `punkty`)
+	  VALUES(NULL,'$imie','$nazwisko','$email','$haslo','$ulica',$nrdomu,'$nrmieszkania',$tel,'$ip',0)";
         if ($polaczanie->query($sql) === TRUE) {
             ?>
             <div id = "suc" class = "row opacity">

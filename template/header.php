@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="pl_PL">
     <head>
@@ -60,7 +61,11 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" data-toggle="modal" data-target="#Register"><span class="glyphicon glyphicon-user"></span> Rejestracja</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
+                        <?php if($_SESSION['logged']==true) {?>
+                        <li><a href="panel.php"><span class="glyphicon glyphicon-user"></span> Panel Użytkownika</a></li>
+                        <?php } else { ?>
+                        <li><a href="#" data-toggle="modal" data-target="#Login"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </nav>

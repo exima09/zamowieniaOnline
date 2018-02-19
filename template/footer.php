@@ -99,15 +99,44 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])) {
                             <button type="submit" class="btn btn-default">Załóż konto</button>
                         </div>
                     </div>
-
-
-                    <!-- okno modalne email-->
                 </div>
             </div>
         </div>
     </form>
 </div>
-
-
+<!-- END REGISTER-->
+<!-- Modal - LOGIN -->
+<div id="Login" class="modal fade" role="dialog">
+    <form action="login.php" method="POST">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Logowanie:</h4>
+                </div>
+                <div class="modal-body col-sm-12">
+                    <div class="form-group col-sm-12">
+                        <label for="inputEmail" class="col-sm-5 control-label">Email / Numer Telefonu</label>
+                        <div class="col-sm-7">
+                            <input type="email" class="form-control" name="inputEmailTel" id="inputEmailTel" placeholder="Podaj adres email lub numer telefonu" required>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label for="inputHaslo" class="col-sm-5 control-label">Hasło</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" name="inputHasloLog" id="inputHasloLog" placeholder="Podaj hasło" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group col-sm-12">
+                            <button type="submit" class="btn btn-default">Zaloguj</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- END LOGIN-->
 </body>
 </html>
