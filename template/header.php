@@ -60,10 +60,11 @@
                         <li><a href="#">Kontakt</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" data-toggle="modal" data-target="#Register"><span class="glyphicon glyphicon-user"></span> Rejestracja</a></li>
-                        <?php if($_SESSION['logged']==true) {?>
+                        <?php if(isset($_SESSION['logged'])&& $_SESSION['logged']!=true) {?>
                         <li><a href="panel.php"><span class="glyphicon glyphicon-user"></span> Panel Użytkownika</a></li>
+                        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Wyloguj</a></li>
                         <?php } else { ?>
+                        <li><a href="#" data-toggle="modal" data-target="#Register"><span class="glyphicon glyphicon-user"></span> Rejestracja</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#Login"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
                         <?php } ?>
                     </ul>
