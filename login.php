@@ -28,7 +28,7 @@ if ($polaczanie->connect_errno != 0) {
             $_SESSION['nr_telefonu'] = $row['nr_telefonu'];
             $_SESSION['punkty'] = $row['punkty'];
             $result->close();
-            header('Location:rezerwacja.php');
+            header('Location:index.php');
         } else {
             header('Location:login.php');
             $_SESSION['blad'] = 100;

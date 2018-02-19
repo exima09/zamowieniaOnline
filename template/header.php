@@ -13,6 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Alegreya+SC&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="https://siciliana.pl/wp-content/uploads/2016/12/favicon.png" />
         <style type="text/css">
             body {
                 font-family: 'Alegreya SC', sans-serif;
@@ -61,11 +62,11 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <?php if(isset($_SESSION['logged'])&& $_SESSION['logged']!=true) {?>
-                        <li><a href="panel.php"><span class="glyphicon glyphicon-user"></span> Panel Użytkownika</a></li>
-                        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Wyloguj</a></li>
-                        <?php } else { ?>
                         <li><a href="#" data-toggle="modal" data-target="#Register"><span class="glyphicon glyphicon-user"></span> Rejestracja</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#Login"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
+                        <?php } else { ?>
+                        <li><a href="panel.php"><span class="glyphicon glyphicon-user"></span> Panel Użytkownika</a></li>
+                        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Wyloguj</a></li>
                         <?php } ?>
                     </ul>
                 </div>

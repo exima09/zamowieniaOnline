@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -11,7 +12,8 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        echo "Hello";
+        echo "Hello ".$_SESSION['imie']." ".$_SESSION['nazwisko'];
         ?>
+        <a href="rezerwacja.php" >Rezerwacja</a>
     </body>
 </html>
