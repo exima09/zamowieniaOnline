@@ -40,13 +40,13 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])) {
                     <div class="form-group col-sm-12">
                         <label for="inputEmail" class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Podaj adres email" required>
+                            <input type="email" autocomplete="username email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Podaj adres email" required>
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
                         <label for="inputHaslo" class="col-sm-2 control-label">Hasło</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" name="inputHaslo" id="inputHaslo" placeholder="Podaj hasło" required>
+                            <input type="password" autocomplete="current-password" class="form-control" name="inputHaslo" id="inputHaslo" placeholder="Podaj hasło" required>
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
@@ -118,13 +118,13 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])) {
                     <div class="form-group col-sm-12">
                         <label for="inputEmail" class="col-sm-5 control-label">Email / Numer Telefonu</label>
                         <div class="col-sm-7">
-                            <input type="email" class="form-control" name="inputEmailTel" id="inputEmailTel" placeholder="Podaj adres email lub numer telefonu" required>
+                            <input type="email" autocomplete="username email" class="form-control" name="inputEmailTel" id="inputEmailTel" placeholder="Podaj adres email lub numer telefonu" required>
                         </div>
                     </div>
                     <div class="form-group col-sm-12">
                         <label for="inputHaslo" class="col-sm-5 control-label">Hasło</label>
                         <div class="col-sm-7">
-                            <input type="password" class="form-control" name="inputHasloLog" id="inputHasloLog" placeholder="Podaj hasło" required>
+                            <input type="password" autocomplete="current-password" class="form-control" name="inputHasloLog" id="inputHasloLog" placeholder="Podaj hasło" required>
                         </div>
                     </div>
                 </div>
